@@ -1,0 +1,18 @@
+# dbt_project.yml
+name: my_project
+version: 1.0.0
+
+profile: my_spark_profile
+
+# Configure the Spark target
+target: dev
+outputs:
+  dev:
+    type: spark
+    driver: com.databricks.spark.redshift.RedshiftDriver
+    host: my-cluster-hostname
+    port: 5439
+    user: myuser
+    password: mypassword
+    database: mydatabase
+    schema: myschema

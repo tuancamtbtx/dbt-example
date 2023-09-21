@@ -1,0 +1,15 @@
+my_spark_profile:
+  target: dev
+  outputs:
+    dev:
+      type: spark
+      spark:
+        host: spark://localhost:7077
+        username: myuser
+        password: mypassword
+        app_name: my_dbt_app
+        spark_home: /path/to/spark/home
+        jars:
+          - /path/to/my_jar_file.jar
+        packages:
+          - com.mycompany.spark.package
